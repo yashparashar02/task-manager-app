@@ -23,8 +23,13 @@ function Login() {
 
     } catch (error) {
 
-      alert("Invalid Credentials");
-    }
+  console.log("LOGIN ERROR:", error);
+
+  alert(
+    error.response?.data ||
+    error.message
+  );
+}
   };
 
   return (

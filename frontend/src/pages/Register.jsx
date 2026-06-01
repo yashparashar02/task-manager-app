@@ -21,8 +21,13 @@ function Register() {
 
     } catch (error) {
 
-      alert("Registration Failed");
-    }
+  console.log("REGISTER ERROR:", error);
+
+  alert(
+    error.response?.data ||
+    error.message
+  );
+}
   };
 
   return (
